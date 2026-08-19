@@ -1,293 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
-:root {
-    --bg-color: #f8fafc;
-    --card-bg: #ffffff;
-    --text-main: #0f172a;
-    --text-muted: #64748b;
-    --primary: #25a170;
-    --primary-hover: #25a170;
-    --danger: #ef4444;
-    --danger-hover: #dc2626;
-    --border-color: #e2e8f0;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    --radius: 10px;
-}
-
 body.dark-mode {
-    --bg-color: #0f172a;
-    --card-bg: #1e293b;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --border-color: #334155;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-}
-
-body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    line-height: 1.5;
-    padding-bottom: 60px;
-}
-
-header {
-    background: var(--card-bg);
-    border-bottom: 1px solid var(--border-color);
-    padding: 1.25rem;
-    text-align: center;
-    box-shadow: var(--shadow);
-}
-
-header h1 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--primary);
-}
-
-main {
-    max-width: 680px;
-    margin: 1.5rem auto;
-    padding: 0 1rem;
-}
-
-section {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 1.25rem;
-    margin-bottom: 1.25rem;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-section h2,
-section h3 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-    color: var(--text-main);
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 0.4rem;
-}
-
-input[type="text"],
-textarea {
-    width: 100%;
-    padding: 8px 12px;
-    font-family: inherit;
-    font-size: 0.9rem;
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    outline: none;
-}
-
-input[type="text"]:focus,
-textarea:focus {
-    border-color: var(--primary);
-}
-
-textarea {
-    resize: vertical;
-    min-height: 70px;
-}
-
-div {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-button {
-    font-family: inherit;
-    font-size: 0.825rem;
-    font-weight: 500;
-    padding: 6px 14px;
-    border-radius: 6px;
-    border: none;
-    background-color: var(--primary);
+    background-color: #222;
     color: white;
-    cursor: pointer;
 }
 
-button:hover {
-    background-color: var(--primary-hover);
+body.dark-mode header {
+    background-color: #333;
 }
 
-#toggle-tema {
-    align-self: flex-start;
-    background-color: transparent;
-    color: var(--text-main);
-    border: 1px solid var(--border-color);
-    margin-bottom: 1rem;
+body.dark-mode section {
+    background-color: #333;
+    border-color: #555;
 }
 
-#toggle-tema:hover {
-    background-color: var(--border-color);
+body.dark-mode input[type="text"],
+body.dark-mode textarea {
+    background-color: #444;
+    color: white;
+    border-color: #666;
 }
 
-
-/* FASE 2: Minggu 4-6 */
-
-ul#daftar-tugas {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+body.dark-mode ul li,
+body.dark-mode .catatan-item {
+    background-color: #444;
+    border-color: #555;
 }
 
-ul#daftar-tugas li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 12px;
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    font-size: 0.9rem;
-    cursor: grab;
-}
-
-ul#daftar-tugas li button {
-    background-color: var(--danger);
-    padding: 4px 10px;
-    font-size: 0.75rem;
-}
-
-ul#daftar-tugas li button:hover {
-    background-color: var(--danger-hover);
-}
-
-
-/* FASE 3: Minggu 8 */
-
-.catatan-item {
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-left: 4px solid var(--primary);
-    border-radius: 6px;
-    padding: 10px;
-    margin-top: 6px;
-}
-
-.catatan-item p {
-    font-size: 0.9rem;
-    margin-bottom: 4px;
-}
-
-.catatan-item small {
-    color: var(--text-muted);
-    font-size: 0.75rem;
-}
-
-footer {
-    text-align: center;
-    padding: 1.25rem;
-    color: var(--text-muted);
-    font-size: 0.8rem;
-    border-top: 1px solid var(--border-color);
-    margin-top: 2rem;
-}
-
-
-/* Tambahan tampilan */
-
-#app>div {
-    width: 100%;
-}
-
-#app>section {
-    width: 100%;
-}
-
-.task-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    width: 100%;
-}
-
-.task-row>span {
-    flex: 1;
-}
-
-.task-actions {
-    display: flex;
-    gap: 6px;
-}
-
-.task-actions .btn-selesai {
-    background-color: var(--primary);
-}
-
-.task-actions .btn-hapus,
-.catatan-actions .btn-hapus {
-    background-color: var(--danger);
-}
-
-.catatan-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap: 10px;
-}
-
-.catatan-row>div:first-child {
-    display: block;
-    flex: 1;
-}
-
-.catatan-actions {
-    display: flex;
-    gap: 6px;
-}
-
-.weather-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.weather-info p {
-    margin: 0;
-}
-
-.kutipan {
-    line-height: 1.6;
-}
-
-#tanggal-jam {
-    color: var(--primary);
-    font-weight: 600;
-}
-
-#status {
-    color: var(--text-muted);
-    font-size: 0.8rem;
-}
-
-@media (max-width: 600px) {
-    main {
-        margin: 1rem auto;
-    }
-    .task-row,
-    .catatan-row {
-        align-items: flex-start;
-    }
-    .task-actions,
-    .catatan-actions {
-        flex-wrap: wrap;
-    }
+body.dark-mode #status,
+body.dark-mode footer {
+    color: #bbb;
 }
