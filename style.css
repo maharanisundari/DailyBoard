@@ -37,22 +37,33 @@ header {
     text-align: center;
 }
 
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    grid-column: 1 / -1;
+}
+
 header h1 {
     color: var(--primary);
     font-size: 24px;
 }
 
 main {
-    max-width: 680px;
-    margin: 20px auto;
-    padding: 0 15px;
+    max-width: 1200px !important;
+    margin: 20px auto !important;
+    padding: 0 15px !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
 }
 
 section {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     padding: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 0 !important;
     border-radius: 10px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
 }
@@ -159,14 +170,34 @@ ul#daftar-tugas li {
     gap: 5px;
 }
 
+#btn-refresh-kutipan {
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.2s ease;
+}
+
+#btn-refresh-kutipan:active {
+    transform: scale(0.95);
+}
+
+.spin {
+    animation: putar 0.5s linear;
+}
+
+@keyframes putar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .weather-info {
     display: flex;
     gap: 10px;
-}
-
-#tanggal-jam {
-    color: var(--primary);
-    font-weight: 600;
 }
 
 #status {
@@ -178,4 +209,18 @@ footer {
     text-align: center;
     padding: 20px;
     color: var(--text-muted);
+}
+
+button {
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+    margin: 3px !important;
+    border-radius: 6px !important;
+    cursor: pointer;
+}
+
+.tugas-item div,
+divFilter {
+    display: flex;
+    gap: 6px;
 }

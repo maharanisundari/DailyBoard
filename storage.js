@@ -1,5 +1,3 @@
-// Minggu 15 - Module Storage
-
 export function simpanKeStorage(key, data) {
     localStorage.setItem(key, JSON.stringify(data));
 }

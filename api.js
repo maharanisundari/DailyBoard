@@ -1,11 +1,9 @@
-// Minggu 15 - Module API
-
 // Kutipan
 export function ambilKutipan() {
     return fetch("https://dummyjson.com/quotes/random")
         .then(res => {
             if (!res.ok) {
-                throw new Error("Gagal mengambil kutipan.");
+                throw new Error("Gagal mengambil kutipan saat ini.");
             }
 
             return res.json();
@@ -21,7 +19,7 @@ export function ambilCuaca(namaKota) {
         .then(res => res.json())
         .then(geoData => {
             if (!geoData.results || geoData.results.length === 0) {
-                throw new Error(`Kota '${namaKota}' tidak ditemukan.`);
+                throw new Error(`Kota '${namaKota}' yang anda cari tidak ditemukan.`);
             }
 
             const lokasi = geoData.results[0];

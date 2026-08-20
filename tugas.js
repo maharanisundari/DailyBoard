@@ -1,5 +1,3 @@
-// Minggu 15 - Module Tugas
-
 export function tambahTugas(daftar, nama) {
     return [
         ...daftar,
@@ -17,16 +15,14 @@ export function hapusTugas(daftar, id) {
 
 export function toggleSelesai(daftar, id) {
     return daftar.map(tugas =>
-        tugas.id === id ?
-        {...tugas, selesai: !tugas.selesai } :
+        tugas.id === id ? {...tugas, selesai: !tugas.selesai } :
         tugas
     );
 }
 
 export function editTugas(daftar, id, namaBaru) {
     return daftar.map(tugas =>
-        tugas.id === id ?
-        {...tugas, nama: namaBaru.trim() } :
+        tugas.id === id ? {...tugas, nama: namaBaru.trim() } :
         tugas
     );
 }

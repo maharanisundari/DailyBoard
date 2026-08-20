@@ -1,9 +1,7 @@
 # DailyBoard
-
 DailyBoard adalah aplikasi sederhana untuk membantu mengatur tugas dan catatan harian.
 
 ## Fitur
-
 - Menambahkan tugas
 - Menghapus tugas
 - Mengedit tugas
@@ -26,7 +24,6 @@ DailyBoard adalah aplikasi sederhana untuk membantu mengatur tugas dan catatan h
 ## Cara Menggunakan
 
 ### Tugas
-
 1. Masukkan nama tugas pada kolom input.
 2. Klik tombol Tambah.
 3. Klik Selesai untuk menandai tugas sebagai selesai.
@@ -38,35 +35,30 @@ DailyBoard adalah aplikasi sederhana untuk membantu mengatur tugas dan catatan h
 9. Tugas dapat dipindahkan menggunakan fitur drag and drop.
 
 ### Catatan
-
 1. Tulis catatan pada kolom Catatan Cepat.
 2. Klik Tambah Catatan.
 3. Double-click catatan untuk mengeditnya.
 4. Klik Hapus untuk menghapus catatan.
 
 ### Cuaca
-
 1. Masukkan nama kota pada kolom cuaca.
 2. Klik Cari Cuaca.
 3. Aplikasi akan menampilkan informasi cuaca kota tersebut.
 4. Saat pertama kali dibuka, aplikasi menampilkan cuaca Jakarta secara otomatis.
 
 ### Kutipan
-
 Kutipan harian akan dimuat secara otomatis ketika aplikasi dibuka.
 
 ### Dark Mode
-
 Klik tombol Ganti Tema untuk mengubah tampilan antara tema terang dan gelap.
 
 ## Struktur File
-
 DailyBoard/
-├── index.html
-├── style.css
-├── script.js
-├── tugas.js
-├── catatan.js
-├── storage.js
-├── api.js
-└── README.md
+index.html
+style.css
+script.js
+tugas.js
+catatan.js
+storage.js
+api.js
+README.md
