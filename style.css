@@ -62,7 +62,6 @@ main {
 @media (min-width: 768px) {
     main {
         grid-template-columns: 1fr 1fr;
-        /* Baru berubah jadi 2 kolom kalau layar lebar */
     }
 }
 
